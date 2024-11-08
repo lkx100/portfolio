@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container text-center mt-5">
+    <img src="{% static 'images/profile.png' %}" alt="Profile Picture" class="rounded-circle" width="150" height="150">
+    <h1 class="mt-3">Lucky Kumar</h1>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Interests Card -->
+        <div class="col-md-3">
+            <div class="card expandable-card">
+                <div class="card-body text-center">
+                    <!-- Add Image Here -->
+                    <img src="{% static 'images/interests.jpg' %}" alt="Interests" class="card-image mb-2">
+                    <h5 class="card-title">Interests</h5>
+                    <div class="card-content">
+                        <p>Your interests go here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Resume Card -->
+        <div class="col-md-3">
+            <div class="card">
+                <a href="{% static 'resume.pdf' %}" target="_blank" class="text-decoration-none text-dark">
+                    <div class="card-body text-center">
+                        <!-- Add Image Here -->
+                        <img src="{% static 'images/resume.jpg' %}" alt="Resume" class="card-image mb-2">
+                        <h5 class="card-title">Resume</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Achievements Card -->
+        <div class="col-md-3">
+            <div class="card expandable-card">
+                <div class="card-body text-center">
+                    <!-- Add Image Here -->
+                    <img src="{% static 'images/achievements.jpg' %}" alt="Achievements" class="card-image mb-2">
+                    <h5 class="card-title">Achievements</h5>
+                    <div class="card-content">
+                        <p>Your achievements go here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Something Card -->
+        <div class="col-md-3">
+            <div class="card expandable-card">
+                <div class="card-body text-center">
+                    <!-- Add Image Here -->
+                    <img src="{% static 'images/education.jpg' %}" alt="Something" class="card-image mb-2">
+                    <h5 class="card-title">Something</h5>
+                    <div class="card-content">
+                        <p>Additional content goes here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
