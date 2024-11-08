@@ -9,8 +9,29 @@ body {
     background: linear-gradient(to bottom right, #32CD32, #FFFF99);
 }
 
+/* Typing animation styles */
+#typing-text {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange; /* Cursor effect */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
 .card {
     transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card-image {
@@ -18,10 +39,6 @@ body {
     height: auto;
     max-height: 150px; /* Adjust as needed */
     border-radius: 8px;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 /* Styles for expandable cards */
@@ -50,4 +67,54 @@ body {
 .expandable-card .card-content p {
     margin-top: 10px;
     color: #333;
+}
+
+/* Styles for social cards */
+.social-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-card:hover {
+    transform: scale(1.05);
+}
+
+.social-image {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.github-image {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+}
+
+.linkedin-image {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+}
+
+.social-text {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Additional styles for list items in card content */
+.card-content ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.card-content ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Reduce gap between social cards */
+.row.align-items-start .col-md-2 {
+    padding-left: 5px;
+    padding-right: 5px;
 }
